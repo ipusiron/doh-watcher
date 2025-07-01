@@ -28,8 +28,8 @@ Google Colab上で動作し、以下の機能を通じて「通常のDNS」と�
 
 >![グラフ表示](images/screenshot2.png)
 >
-> *DoHより通常のDNSのほうが圧倒的にレスポンスが早い。*
-> *Claudeflare DoHのほうがGoogle DoHよりレスポンスが早い。*
+> *DoHより標準DNSのほうが圧倒的にレスポンスが早い。*
+> *Google DoHはClaudeflare DoHよりレスポンスが早い。*
 
 ---
 
