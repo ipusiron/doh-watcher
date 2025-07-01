@@ -1,0 +1,34 @@
+# Colab / Jupyter 関連
+.ipynb_checkpoints/
+*.nbconvert.ipynb
+
+# Python キャッシュ
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# バーチャル環境
+.env/
+.venv/
+env/
+venv/
+
+# macOS / Windows ごみファイル
+.DS_Store
+Thumbs.db
+
+# ログ・一時ファイル
+*.log
+*.tmp
+*.swp
+
+# Python 環境ファイル（任意）
+pip-log.txt
+pip-delete-this-directory.txt
+
+# VSCode設定（任意）
+.vscode/
+
+# Colabが生成する一時ファイル（念のため）
+*.bak
