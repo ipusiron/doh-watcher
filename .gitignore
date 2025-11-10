@@ -32,3 +32,6 @@ pip-delete-this-directory.txt
 
 # Colabが生成する一時ファイル（念のため）
 *.bak
+
+# Claude
+.claude/
