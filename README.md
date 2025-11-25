@@ -1,3 +1,37 @@
+<!--
+---
+id: day015
+slug: doh-watcher
+
+title: "DoH Watcher"
+
+subtitle_ja: "DNS over HTTPS効果観察ツール"
+subtitle_en: "DNS over HTTPS Effect Observation Tool"
+
+description_ja: "通常のDNSとDoH（Google/Cloudflare）の応答時間を比較・可視化し、DoHの効果を体験的に学べる教育ツール"
+description_en: "An educational tool to compare and visualize response times between traditional DNS and DoH (Google/Cloudflare), enabling hands-on learning of DoH benefits"
+
+category_ja:
+  - ネットワーク
+category_en:
+  - Network
+
+difficulty: 2
+
+tags:
+  - DNS
+  - DoH
+  - HTTPS
+  - Google Colab
+  - Privacy
+
+repo_url: "https://github.com/ipusiron/doh-watcher"
+demo_url: "https://colab.research.google.com/github/ipusiron/doh-watcher/blob/main/doh_watcher.ipynb"
+
+hub: true
+---
+-->
+
 # DoH Watcher - DNS over HTTPS効果観察ツール
 
 **Day15 - 生成AIで作るセキュリティツール100**
