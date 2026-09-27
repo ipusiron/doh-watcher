@@ -34,6 +34,8 @@ hub: true
 
 # DoH Watcher - DNS over HTTPS効果観察ツール
 
+[English](README.en.md) · 日本語
+
 ![GitHub stars](https://img.shields.io/github/stars/ipusiron/doh-watcher?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/ipusiron/doh-watcher?style=social)
 ![GitHub last commit](https://img.shields.io/github/last-commit/ipusiron/doh-watcher)
@@ -297,7 +299,8 @@ doh-watcher/
 ├── CLAUDE.md
 ├── doh_watcher.ipynb
 ├── LICENSE
-└── README.md
+├── README.md
+└── README.en.md
 ```
 
 ## 🧪 テスト

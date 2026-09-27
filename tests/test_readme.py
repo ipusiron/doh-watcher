@@ -94,7 +94,7 @@ class ReadmeTests(unittest.TestCase):
             'images', 'images/screenshot1.png', 'images/screenshot2.png',
             'tests', 'tests/nbloader.py', 'tests/test_notebook.py', 'tests/test_readme.py',
             'tests/test_stats.py', 'tests/test_transport.py', 'tests/test_wireformat.py',
-            '.gitignore', 'CLAUDE.md', 'doh_watcher.ipynb', 'LICENSE', 'README.md',
+            '.gitignore', 'CLAUDE.md', 'doh_watcher.ipynb', 'LICENSE', 'README.md', 'README.en.md',
         ])
         for path in paths:
             self.assertTrue((ROOT / path).exists(), path)
