@@ -116,6 +116,20 @@ On 2026-09-20, both providers returned AD=True for `example.com` with DO and AD=
 
 ---
 
+## 🎯 Use cases
+
+### Ways of using this tool in particular
+
+- Confirming that a DNS name is encoded into the wire format (encoding and protocol classes): encoding `example.com` gives a run of length-prefixed labels, `07 'example' 03 'com' 00` (076578616d706c6503636f6d00 in hex). You can confirm, as bytes, that a domain name is sent to DNS not as a dot-separated string but as a run with each label's length in front
+- Confirming that the query is carried in a URL as base64url over HTTPS (DoH and privacy classes): turning the built DNS query into base64url (no padding) gives a string starting `AAABAAAB...`, which can be turned back into the query. DoH puts this in an HTTPS GET parameter, so an on-path observer sees only the HTTPS connection, not the queried name
+- Confirming that response times are compared by percentile (statistics classes): for the response times `[10, 20, 30, 40, 50]`, the 50th percentile (median) is 30 and the 95th is 48. You can confirm comparing DoH and standard DNS response times by percentile, which looks at a position in the distribution rather than the mean
+
+### General uses
+
+- Measure and compare the response times and behavior of DoH and standard DNS in your own environment
+- Use it as material to learn the DNS wire format and base64url encoding
+- Use it as material to explain network privacy (protection from on-path observation)
+
 ## 🔒 Security and privacy
 
 Queries go to `dns.google` and `cloudflare-dns.com` over HTTPS, and to your OS resolver for comparison. What is sent is the domain names in the settings cell, plus the random subdomains generated for `unique`. Resolving the DoH servers themselves depends on your OS.

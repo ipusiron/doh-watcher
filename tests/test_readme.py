@@ -101,3 +101,25 @@ class ReadmeTests(unittest.TestCase):
         guide = (ROOT / 'CLAUDE.md').read_text(encoding='utf-8')
         for cell in notebook()['cells']:
             self.assertIn(cell['id'], guide)
+
+
+class UseCaseReadmeTests(unittest.TestCase):
+    def setUp(self):
+        from nbloader import load_notebook
+        self.m = load_notebook('core')
+        self.readme = README
+        self.readme_en = (ROOT / 'README.en.md').read_text(encoding='utf-8')
+
+    def test_usecase_examples(self):
+        wire = self.m.encode_name('example.com')
+        self.assertEqual(wire.hex(), '076578616d706c6503636f6d00')
+        query = self.m.build_query('example.com')
+        param = self.m.to_dns_param(query)
+        self.assertTrue(param.startswith('AAABAAAB'))
+        self.assertEqual(self.m.from_dns_param(param), query)
+        self.assertEqual(self.m.percentile([10, 20, 30, 40, 50], 50), 30.0)
+        self.assertEqual(self.m.percentile([10, 20, 30, 40, 50], 95), 48.0)
+        for text in (self.readme, self.readme_en):
+            self.assertIn('076578616d706c6503636f6d00', text)
+            self.assertIn('AAABAAAB', text)
+            self.assertIn('[10, 20, 30, 40, 50]', text)
