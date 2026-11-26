@@ -21,7 +21,7 @@ class ReadmeTests(unittest.TestCase):
             'id': 'day015', 'slug': 'doh-watcher', 'title': 'DoH Watcher',
             'repo_url': 'https://github.com/ipusiron/doh-watcher',
             'demo_url': 'https://colab.research.google.com/github/ipusiron/doh-watcher/blob/main/doh_watcher.ipynb',
-            'hub': 'true', 'difficulty': '2',
+            'hub': 'true', 'difficulty': '3',
         }.items():
             actual = re.search(r'^' + key + r':\s*(.+)$', metadata, re.M).group(1).strip('"')
             self.assertEqual(actual, expected)

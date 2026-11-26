@@ -16,7 +16,7 @@ category_ja:
 category_en:
   - Network
 
-difficulty: 2
+difficulty: 3
 
 tags:
   - dns
